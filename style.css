@@ -1,0 +1,266 @@
+/*
+Theme Name: Rakesh
+Author: Rakesh
+Author URI: https://wordpress.org/
+Description: Just a site.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/* MEDIA */
+/* IMAGES -----------------------------------------------------*/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LAYOUT */
+body {
+  font-family: 'Bebas Neue', cursive;
+  margin: 0;
+  padding: 0;
+  min-width: 450px;
+}
+
+.site-main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-row: 2;
+  grid-row: 2rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .site-main {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    grid-gap: 0.3rem;
+  }
+  .site-main article:nth-of-type(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+  .site-main article:nth-of-type(2) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / span 2;
+  }
+  .site-main article:nth-of-type(3) {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-column: 5 / span 2;
+  }
+  .site-main article:nth-of-type(4) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1 / span 3;
+  }
+  .site-main article:nth-of-type(5) {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 3;
+    grid-column: 4 / span 3;
+  }
+  .site-main article:nth-of-type(6) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / span 2;
+  }
+  .site-main article:nth-of-type(7) {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-column: 3 / span 2;
+  }
+  .site-main article:nth-of-type(8) {
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 2;
+    grid-column: 5 / span 2;
+  }
+}
+
+.site-header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.site-header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.site-header ul li {
+  list-style-type: none;
+}
+
+.site-header ul a:first-child,
+.site-header ul a:nth-of-type(2) {
+  margin-right: 0.3rem;
+  padding: 0.1rem 0.7rem 0.1rem 0.7rem;
+  border: 1px solid;
+  display: block;
+  border-radius: 0.125rem;
+}
+
+.site-header ul a {
+  color: black;
+  background-color: lightgrey;
+}
+
+.site-header ul p {
+  padding-left: 1.5rem;
+  display: block;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.cat {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cat .cat-sub {
+  position: absolute;
+  top: 0;
+  right: 8px;
+  margin-top: 0;
+  padding-top: 0;
+  letter-spacing: 2px;
+  background-color: lightgrey;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+  color: white;
+}
+
+.cat .cat-sub a {
+  color: black;
+}
+
+article:nth-of-type(n+2) {
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 614px) {
+  article:nth-of-type(n+2) {
+    margin-top: 0;
+  }
+}
+
+article h2 {
+  color: gray;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.ex-content {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.8rem;
+  word-spacing: 2px;
+}
+
+.next-link {
+  text-align: end;
+}
+
+.next-link a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 2px;
+}
+
+.text-content {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.custom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.custom p {
+  background-color: gray;
+  color: white;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border: solid 1px white;
+  border-radius: 2px;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.custom .p2 {
+  margin-left: 0.5rem;
+}
+
+.category .div1 {
+  text-align: center;
+}
+
+.category .category-title {
+  text-transform: uppercase;
+  color: black;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 2.5rem;
+}
+
+.title-link {
+  color: black;
+  text-decoration: none;
+}
+
+.text-content h2 a {
+  text-decoration: none;
+  color: gray;
+}
+
+.single .site-main {
+  display: block;
+}
+
+.single .text-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.single .text-content .short-div p {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.single .text-content a {
+  color: black;
+}
+/*# sourceMappingURL=style.css.map */
